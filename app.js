@@ -233,34 +233,35 @@ for (const cellDiv of cellDivs) {
   
 //reset
 resetDiv.addEventListener('click', (e)=>{
-    for(let i=0 ;i<3 ;i++){
-        for(let j=0 ;j<3 ; j++){
-            gameState[i][j]=null;
-        }
-    }
-    currentRed = true;
-    statusDiv.innerHTML = 'Red is next';
-    gameIsLive = true;
-    currentSelectedIn = null;
-    playedCoins=[];
-    renderGrid();
+    location.reload();
+    // for(let i=0 ;i<3 ;i++){
+    //     for(let j=0 ;j<3 ; j++){
+    //         gameState[i][j]=null;
+    //     }
+    // }
+    // currentRed = true;
+    // statusDiv.innerHTML = 'Red is next';
+    // gameIsLive = true;
+    // currentSelectedIn = null;
+    // playedCoins=[];
+    // renderGrid();
 
-    //repopulate players coins
-    let pc = document.querySelectorAll('.player-cell');
-    for (let i=0;i<pc.length;i++) {
-        color=null;
-        size=null;
-        if(i<6)
-            color="red";
-        else
-            color="blue";
-        switch(i%3){
-            case 0: size="50%";break;
-            case 1: size="70%";break;
-            case 2: size="100%";break;
-        }
-        pc[i].innerHTML=('<img src="asset/'+color+'Circle.png" height='+size+' width='+size+'>');
-    }
+    // //repopulate players coins
+    // let pc = document.querySelectorAll('.player-cell');
+    // for (let i=0;i<pc.length;i++) {
+    //     color=null;
+    //     size=null;
+    //     if(i<6)
+    //         color="red";
+    //     else
+    //         color="blue";
+    //     switch(i%3){
+    //         case 0: size="50%";break;
+    //         case 1: size="70%";break;
+    //         case 2: size="100%";break;
+    //     }
+    //     pc[i].innerHTML=('<img src="asset/'+color+'Circle.png" height='+size+' width='+size+'>');
+    // }
 
 });
 
